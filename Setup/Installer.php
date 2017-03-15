@@ -14,10 +14,12 @@ class Installer implements Setup\SampleData\InstallerInterface
 
 
     public function __construct(
-        \MagentoEse\SalesSampleData\Model\Order $sampleOrder
+        \MagentoEse\SalesSampleData\Model\Order $sampleOrder,
+        \Magento\Indexer\Model\Processor $index
     ) {
 
         $this->sampleOrder = $sampleOrder;
+        $this->index = $index;
 
     }
 
@@ -26,6 +28,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function install()
     {
-       $this->sampleOrder->install(['MagentoEse_B2BOrderSampleData::fixtures/orders.csv']);
+        $this->index->reindexAll();
+        $this->sampleOrder->install(['MagentoEse_B2BOrderSampleData::fixtures/orders.csv']);
     }
 }
