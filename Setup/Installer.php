@@ -29,6 +29,6 @@ class Installer implements Setup\SampleData\InstallerInterface
     public function install()
     {
         $this->index->reindexAll();
-        $this->sampleOrder->install(['MagentoEse_B2BOrderSampleData::fixtures/orders.csv']);
+        $this->sampleOrder->install(['MagentoEse_B2BOrderSampleData::fixtures/orders.csv'],true);
     }
 }
