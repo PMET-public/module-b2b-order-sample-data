@@ -10,9 +10,17 @@ use Magento\Framework\Setup;
 
 class Installer implements Setup\SampleData\InstallerInterface
 {
+    /**
+     * @var \MagentoEse\SalesSampleData\Model\Order
+     */
     protected $sampleOrder;
 
 
+    /**
+     * Installer constructor.
+     * @param \MagentoEse\SalesSampleData\Model\Order $sampleOrder
+     * @param \Magento\Indexer\Model\Processor $index
+     */
     public function __construct(
         \MagentoEse\SalesSampleData\Model\Order $sampleOrder,
         \Magento\Indexer\Model\Processor $index

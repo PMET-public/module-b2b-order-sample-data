@@ -19,6 +19,11 @@ class InstallData implements Setup\InstallDataInterface
      */
     protected $installer;
 
+    /**
+     * InstallData constructor.
+     * @param Setup\SampleData\Executor $executor
+     * @param Installer $installer
+     */
     public function __construct(Setup\SampleData\Executor $executor, Installer $installer)
     {
         $this->executor = $executor;
