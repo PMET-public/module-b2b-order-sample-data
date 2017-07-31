@@ -15,19 +15,28 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     protected $sampleOrder;
 
+    /**
+     * @var \Magento\Indexer\Model\Processor
+     */
+    protected $index;
+
 
     /**
      * Installer constructor.
      * @param \MagentoEse\SalesSampleData\Model\Order $sampleOrder
      * @param \Magento\Indexer\Model\Processor $index
+     * @param \MagentoEse\B2BOrderSampleData\Model\NegotiableQuotes $negotiableQuotes
      */
+
     public function __construct(
         \MagentoEse\SalesSampleData\Model\Order $sampleOrder,
-        \Magento\Indexer\Model\Processor $index
+        \Magento\Indexer\Model\Processor $index,
+        \MagentoEse\B2BOrderSampleData\Model\NegotiableQuotes $negotiableQuotes
     ) {
 
         $this->sampleOrder = $sampleOrder;
         $this->index = $index;
+        $this->negotiableQuotes = $negotiableQuotes;
 
     }
 
@@ -36,7 +45,8 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function install()
     {
-        $this->index->reindexAll();
-        $this->sampleOrder->install(['MagentoEse_B2BOrderSampleData::fixtures/orders.csv'],true);
+        //$this->index->reindexAll();
+        //$this->sampleOrder->install(['MagentoEse_B2BOrderSampleData::fixtures/orders.csv'],true);
+        $this->negotiableQuotes->install(['MagentoEse_B2BOrderSampleData::fixtures/quotes.csv']);
     }
 }

@@ -1,0 +1,3 @@
+customer_email,product,quote_name,comments,status,discount_type,discount_amount,created_at,updated_at
+ddoback@thelumastory.com,sku=ORT4030054913&qty=5,Summer Promo,type=customer&comment=I'd like a 10% discount please,created,1,10,5/27/17 3:03,5/26/17 12:03
+ckramer@thelumastory.com,sku=SIEHFD63B250&qty=5;sku=LCL316ALX&qty=5,Monthly Restock,type=customer&comment=Can I get a better price?;type=admin&comment=How does this look?,created,2,,6/17/17 9:03,6/16/17 9:03
