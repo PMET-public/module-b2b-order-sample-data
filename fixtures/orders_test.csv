@@ -1,5 +1,0 @@
-customer_email,currency,shipping_method,payment,product,refund,status,created_at,updated_at
-ddoback@thelumastory.com,USD,flatrate_flatrate,checkmo,"sku=ORT4030054913,qty=5",no,complete,5/27/17 3:03,5/26/17 12:03
-shudson@thelumastory.com,USD,flatrate_flatrate,checkmo,"sku=MIL49560102,qty=6",no,complete,5/27/17 10:03,5/27/17 3:03
-pbeesly@thelumastory.com,USD,flatrate_flatrate,checkmo,"sku=MIL260422,qty=5",no,complete,5/27/17 12:03,5/27/17 10:03
-ddoback@thelumastory.com,USD,flatrate_flatrate,checkmo,"sku=MIL260422,qty=6",no,complete,5/27/17 23:03,5/27/17 12:03
