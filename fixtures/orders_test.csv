@@ -1,0 +1,2 @@
+customer_email,currency,shipping_method,payment,product,refund,status,created_at,updated_at
+shudson@thelumastory.com,USD,flatrate_flatrate,checkmo,"sku=MIL49560102,qty=6",no,complete,5/27/17 10:03,5/27/17 3:03
