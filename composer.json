@@ -1,8 +1,10 @@
 {
     "name": "magentoese/module-b2b-order-sample-data",
     "type": "magento2-module",
+    "version": "2.0.0",
     "require": {
-        "magento/framework": "*"
+        "magento/framework": "*",
+        "magentoese/module-data-install": "*"
     },
     "autoload": {
         "files": [ "registration.php" ],

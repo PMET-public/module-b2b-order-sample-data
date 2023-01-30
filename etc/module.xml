@@ -21,6 +21,7 @@
             <module name="MagentoEse_B2BCompanySampleData"/>
             <module name="MagentoEse_B2BSharedCatalogSampleData"/>
             <module name="MagentoEse_B2BPricingSampleData"/>
+            <module name="MagentoEse_DataInstall"/>
         </sequence>
     </module>
 </config>
