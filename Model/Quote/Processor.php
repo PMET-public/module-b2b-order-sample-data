@@ -3,9 +3,10 @@
 
 namespace MagentoEse\B2BOrderSampleData\Model\Quote;
 
-
-
+use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Quote\Api\CartManagementInterface;
+use Magento\Quote\Model\QuoteRepository;
 
 class Processor
 {
@@ -48,9 +49,40 @@ class Processor
     protected $negotiableQuoteManagement;
 
     /**
-     * @var
+     * 
+     * @var CartManagementInterface
      */
     protected $cartmanagement;
+
+    /**
+     * 
+     * @var CustomerRepositoryInterface
+     */
+    protected $customerRepository;
+
+    /**
+     * 
+     * @var Magento\Quote\Api\Data\CartItemInterfaceFactory
+     */
+    protected $cartItemInterface;
+
+    /**
+     * 
+     * @var QuoteRepository
+     */
+    protected $quoteRepository;
+
+    /**
+     * 
+     * @var ProductRepositoryInterface
+     */
+    protected $product;
+
+    /**
+     * 
+     * @var Magento\NegotiableQuote\Api\Data\CommentInterfaceFactory
+     */
+    protected $commentInterface;
 
     public function __construct(
         //\Magento\Backend\Model\Session\QuoteFactory $sessionQuoteFactory,

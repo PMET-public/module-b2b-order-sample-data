@@ -5,7 +5,10 @@
  */
 namespace MagentoEse\B2BOrderSampleData\Model;
 
+use Magento\Framework\App\ResourceConnection;
 use Magento\Framework\Setup\SampleData\Context as SampleDataContext;
+use MagentoEse\B2BOrderSampleData\Model\Quote\Processor;
+use MagentoEse\SalesSampleData\Cron\UpdateSalesData;
 
 /**
  * Class Order
@@ -42,8 +45,29 @@ class NegotiableQuotes
      */
     protected $customerRepository;
 
+    /**
+     * 
+     * @var UpdateSalesData
+     */
     protected $updateSalesData;
+
+    /**
+     * 
+     * @var ResourceConnection
+     */
     protected $resourceConnection;
+
+    /**
+     * 
+     * @var Processor
+     */
+    protected $quoteProcessor;
+
+    /**
+     * 
+     * @var Magento\Sales\Model\OrderFactory
+     */
+    protected $orderFactory;
 
     public function __construct(
         SampleDataContext $sampleDataContext,

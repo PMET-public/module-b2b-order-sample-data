@@ -6,7 +6,7 @@
 namespace MagentoEse\B2BOrderSampleData\Setup;
 
 use Magento\Framework\Setup;
-
+use MagentoEse\B2BOrderSampleData\Model\NegotiableQuotes;
 
 class Installer implements Setup\SampleData\InstallerInterface
 {
@@ -20,6 +20,11 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     protected $index;
 
+    /**
+     * 
+     * @var NegotiableQuotes
+     */
+    protected $negotiableQuotes;
 
     /**
      * Installer constructor.

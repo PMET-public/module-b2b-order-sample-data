@@ -6,18 +6,18 @@
 
 namespace MagentoEse\B2BOrderSampleData\Setup;
 
+use Magento\Framework\App\ResourceConnection;
 use Magento\Framework\Setup\UpgradeDataInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 
 class UpgradeData implements UpgradeDataInterface
 {
-    public $_resourceConfig;
     /**
-     * @var \Magento\Framework\App\Config\ScopeConfigInterface
+     * 
+     * @var ResourceConnection
      */
-    protected $scopeConfig;
-    private $encrypted;
+    protected $resourceConnection;
 
     public function __construct(
         \Magento\Framework\App\ResourceConnection $resourceConnection

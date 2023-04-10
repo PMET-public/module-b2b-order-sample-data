@@ -6,6 +6,9 @@
 namespace MagentoEse\B2BOrderSampleData\Model\Quote;
 
 use Magento\Framework\DataObject;
+use Magento\NegotiableQuote\Api\NegotiableQuoteManagementInterface;
+use Magento\Quote\Api\CartRepositoryInterface;
+use Magento\Quote\Model\Quote\Item\ToOrderItem;
 
 /**
  * Class Processor
@@ -78,7 +81,30 @@ class Processor_
      * @var \Magento\Backend\Model\Session\Quote
      */
     protected $currentSession;
+    
+    /**
+     * 
+     * @var NegotiableQuoteManagementInterface
+     */
+    protected $negotiableQuoteManagement;
+
+    /**
+     * 
+     * @var ToOrderItem
+     */
     protected $toOrderItem;
+
+    /**
+     * 
+     * @var CartRepositoryInterface
+     */
+    protected $cartRepository;
+
+    /**
+     * 
+     * @var Magento\NegotiableQuote\Api\Data\NegotiableQuoteInterfaceFactory
+     */
+    protected $negotiableQuoteInterface;
 
     /**
      * @param \Magento\Framework\Registry $coreRegistry
